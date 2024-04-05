@@ -1,0 +1,155 @@
+.cards {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  &__title {
+    line-height: 24px;
+    color: #838383;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 291px repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 31%;
+  height: 407px;
+  padding: 15px 21px 27px 22px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  span {
+    display: block;
+  }
+  &__img {
+    grid-column: 1/3;
+    justify-self: center;
+  }
+  &__title {
+    color: #1c1c27;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  &__rate {
+    color: #838383;
+    position: relative;
+    margin-left: 28px;
+    &::before {
+      content: "";
+      display: block;
+      width: 23px;
+      height: 22px;
+      background: center / contain no-repeat url("../assets/icons/star.svg");
+      position: absolute;
+      left: -28px;
+    }
+  }
+  &__price {
+    justify-self: end;
+    color: #ffa542;
+  }
+  &__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    justify-self: end;
+    font-weight: 600;
+    font-size: 17px;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .cards {
+    &__list {
+      gap: 18px;
+    }
+  }
+  .card {
+    height: 370px;
+    grid-template-rows: 245px repeat(2, 1fr);
+
+    &__title {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .cards {
+    &__list {
+      gap: 15px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+  .card {
+    width: 45%;
+    height: 355px;
+    grid-template-rows: 235px repeat(2, 1fr);
+    &__title {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cards {
+    &__title {
+      font-size: 18px;
+    }
+    &__list {
+      gap: 15px;
+      justify-content: normal;
+    }
+  }
+  .card {
+    width: 48%;
+    height: 270px;
+    grid-template-rows: 170px repeat(2, 1fr);
+    padding: 10px 18px 10px 18px;
+    &__img {
+      width: 100%;
+    }
+    &__title {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &__rate {
+      font-size: 14px;
+      margin-left: 20px;
+      &::before {
+        width: 18px;
+        height: 18px;
+        left: -20px;
+      }
+    }
+    &__price {
+      font-size: 14px;
+    }
+    &__btn {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .cards {
+    &__list {
+      gap: 12px;
+      justify-content: normal;
+    }
+  }
+}

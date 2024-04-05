@@ -1,0 +1,162 @@
+.basket {
+  color: #1c1c27;
+  &__title {
+    font-size: 28px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 13px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sidebar {
+  width: 350px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding-top: 22px;
+  position: relative;
+  &__total {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 21px;
+  }
+  &__button {
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    border-radius: 20px;
+    border: none;
+    background-color: #101010;
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    bottom: 0;
+  }
+}
+.basket-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    margin-bottom: 20px;
+  }
+}
+.basket-card {
+  padding: 18px 28px 15px 18px;
+  width: 633px;
+  background: #ffffff;
+  border-radius: 30px;
+  position: relative;
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+  &__price {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #aaaaaa;
+  }
+  &__img {
+    width: 145px;
+    margin-right: 24px;
+    margin-bottom: 19px;
+  }
+  &__remove-btn {
+    width: 20px;
+    height: 17px;
+    border: none;
+    background-color: #fff;
+    background-image: url("../assets/icons/remove.svg");
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    margin-right: 28px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__real-price {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+}
+.actions {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  &__item {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  &__increment {
+    background-image: url("../assets/icons/increment.svg");
+    margin-left: 25px;
+  }
+  &__decrement {
+    background-image: url("../assets/icons/decrement.svg");
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .sidebar {
+    width: 335px;
+  }
+  .basket-card {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 270px;
+  }
+  .basket-card {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .basket {
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 600;
+      margin-bottom: 13px;
+    }
+    &__wrapper {
+      display: block;
+    }
+  }
+  .sidebar {
+    width: 400px;
+  }
+  .basket-card {
+    width: 400px;
+  }
+}

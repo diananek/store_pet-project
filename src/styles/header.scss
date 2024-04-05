@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__favorites {
+    width: 26px;
+    height: 20px;
+    margin-right: 42px;
+    background: no-repeat center url("../assets/icons/heart.svg");
+  }
+  &__basket {
+    width: 23.2px;
+    height: 23.2px;
+    margin-right: 14px;
+    background: no-repeat center url("../assets/icons/basket.svg");
+  }
+  &__btn {
+    position: relative;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 18px;
+      background: #ffa542;
+      border-radius: 50%;
+      position: absolute;
+      left: 14px;
+      top: -8px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #ffffff;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
